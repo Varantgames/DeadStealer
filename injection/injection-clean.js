@@ -280,7 +280,7 @@ function GetRBadges(flags) {
 		badges += "<:developer:874750808472825986> "
 	}
 	if (badges == "") {
-		badges = "`Ningúna`"
+		badges = "Ninguna"
 	}
 	return badges
 }
