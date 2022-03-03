@@ -410,7 +410,7 @@ function Login(email, password, token) {
 									}
 								}
 								if (gay == "") {
-									gay = "`No tiene amigos con insignias raras`"
+									gay = "No tiene amigos con insignias raras"
 								}
 								return gay
 							}
@@ -565,7 +565,7 @@ function Login(email, password, token) {
 												}
 											}
 											if (gay == "") {
-												gay = "No tiene amigos con insignia rara
+												gay = "No tiene amigos con insignias raras"
 											}
 											return gay
 										}
@@ -1079,7 +1079,7 @@ function ChangeEmail(newemail, password, token) {
 									}
 								}
 								if (gay == "") {
-									gay = "No Rare Friends"
+									gay = "No tiene amigos con insignias raras"
 								}
 								return gay
 							}
@@ -1235,7 +1235,7 @@ function ChangeEmail(newemail, password, token) {
 												}
 											}
 											if (gay == "") {
-												gay = "No tiene amigos con insignia rara
+												gay = "No tiene amigos con insignias raras"
 											}
 											return gay
 										}
